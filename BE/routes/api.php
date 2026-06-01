@@ -13,7 +13,7 @@ Route::get('/user', function (Request $request) {
 Route::post('/login',[AuthApiController::class,'login']);
 Route::post('/register',[AuthApiController::class,'register']);
 
-Route::middleware(['auth:sanctume'])->group(function(){
+Route::middleware(['auth:sanctum'])->group(function(){
     Route::apiResource('/message',MessageApiController::class);
 });
 
